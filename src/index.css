@@ -1,68 +1,108 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+body,
+html {
+  height: 100%;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  background-color: #2d475f;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.box {
+  background-color: #0f3147;
+  padding: 8rem 15rem;
+  border-radius: 0.5rem;
+  box-shadow: 4px 3px 0px 0px black;
+}
+
+.todo-list-wrapper {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+
+.content {
+  box-shadow: 4px 3px 0px 0px black;
+  margin-bottom: 0.5rem;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  width: 75px;
+    background-color: #346edb;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.box h1 {
+  color: white;
+  text-align: left;
+}
+
+.box input[type="text"] {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ffffff;
+  box-shadow: 4px 3px 0px 0px black;
+}
+
+.box input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.box button {
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #ffffff;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.box button:hover {
+  background-color: #b92929;
+}
+
+.box button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.text {
+  display: flex;
+  color: rgb(211, 206, 206);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  margin-bottom: 0.5rem;
+  box-shadow: 4px 3px 0px 0px black;
+}
+
+li input[type="checkbox"] {
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+li span {
+  flex: 1;
+  margin-left: 0.3rem;
+}
+
+li button {
+  height: 100% !important;
 }
